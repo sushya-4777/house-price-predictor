@@ -6,7 +6,14 @@ model = joblib.load("model.pkl")
 location_encoder = joblib.load("location_encoder.pkl")
 
 st.set_page_config(page_title="House Price Predictor", layout="centered")
-st.markdown("<h1 style='text-align: center; color: navy;'>🏠 House Price Predictor</h1>", unsafe_allow_html=True)
+st.markdown("""
+    <h1 style='text-align: center; color: #002B5B; font-size: 42px;'>
+        🏠 Pune City House Price Predictor
+    </h1>
+    <p style='text-align: center; font-size: 18px;'>Built with ML by <b>Sushant Munde</b></p>
+    <hr style='border: 1px solid #ccc;'>
+""", unsafe_allow_html=True)
+
 st.write("Fill the details below to estimate the house price:")
 
 location = st.selectbox("Select Location", location_encoder.classes_)
